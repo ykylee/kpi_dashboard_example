@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>KPI Dashboard</title>
+</head>
+<body>
+    <h1>KPI Dashboard</h1>
+    <ul>
+        <li>Total Visitors: <span th:text="${totalVisitors}"></span></li>
+        <li>Total Signups: <span th:text="${totalSignups}"></span></li>
+        <li>Conversion Rate: <span th:text="${conversionRate}"></span></li>
+    </ul>
+</body>
+</html>

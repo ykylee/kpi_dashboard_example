@@ -1,0 +1,4 @@
+Project,CompletionRate,ReviewParticipation,UnapprovedCodeAdoptionRate,SAMScore,UnitTestCoverage,UnitTestExecutionRate,UnitTestAutomationRate,ExceptionTestCaseRate,RequirementsTestCaseAutomationRate,RequirementsTestCaseLinkageRate,DefectTestCaseConversionRate,EarlyDefectDiscoveryRate,AvgDefectsPerRelease
+ProjectA,0.90,80,5,4.5,75,85,80,90,70,65,50,40,3
+ProjectB,0.85,75,4,4.0,70,80,75,85,65,60,55,45,2
+ProjectC,0.95,90,3,4.8,80,90,85,92,75,70,60,50,1

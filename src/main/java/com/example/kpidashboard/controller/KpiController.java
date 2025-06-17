@@ -15,9 +15,20 @@ public class KpiController {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("totalVisitors", kpiService.getTotalVisitors());
-        model.addAttribute("totalSignups", kpiService.getTotalSignups());
-        model.addAttribute("conversionRate", String.format("%.2f%%", kpiService.getConversionRate() * 100));
+        model.addAttribute("projectCount", kpiService.getProjectCount());
+        model.addAttribute("avgCompletionRate", String.format("%.2f%%", kpiService.getAvgCompletionRate() * 100));
+        model.addAttribute("avgReviewParticipation", String.format("%.2f%%", kpiService.getAvgReviewParticipation()));
+        model.addAttribute("avgUnapprovedCodeAdoptionRate", String.format("%.2f%%", kpiService.getAvgUnapprovedCodeAdoptionRate()));
+        model.addAttribute("avgSAMScore", String.format("%.2f", kpiService.getAvgSAMScore()));
+        model.addAttribute("avgUnitTestCoverage", String.format("%.2f%%", kpiService.getAvgUnitTestCoverage()));
+        model.addAttribute("avgUnitTestExecutionRate", String.format("%.2f%%", kpiService.getAvgUnitTestExecutionRate()));
+        model.addAttribute("avgUnitTestAutomationRate", String.format("%.2f%%", kpiService.getAvgUnitTestAutomationRate()));
+        model.addAttribute("avgExceptionTestCaseRate", String.format("%.2f%%", kpiService.getAvgExceptionTestCaseRate()));
+        model.addAttribute("avgRequirementsTestCaseAutomationRate", String.format("%.2f%%", kpiService.getAvgRequirementsTestCaseAutomationRate()));
+        model.addAttribute("avgRequirementsTestCaseLinkageRate", String.format("%.2f%%", kpiService.getAvgRequirementsTestCaseLinkageRate()));
+        model.addAttribute("avgDefectTestCaseConversionRate", String.format("%.2f%%", kpiService.getAvgDefectTestCaseConversionRate()));
+        model.addAttribute("avgEarlyDefectDiscoveryRate", String.format("%.2f%%", kpiService.getAvgEarlyDefectDiscoveryRate()));
+        model.addAttribute("avgDefectsPerRelease", String.format("%.2f", kpiService.getAvgDefectsPerRelease()));
         return "index";
     }
 }
